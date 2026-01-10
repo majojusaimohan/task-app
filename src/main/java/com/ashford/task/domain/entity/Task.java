@@ -22,7 +22,7 @@ public class Task {
         this.dueDate = dueDate;
         this.status = status;
         this.priority = priority;
-        Created = created;
+        this.created = created;
         this.updated = updated;
     }
 
@@ -49,7 +49,7 @@ public class Task {
     private TaskPriority priority;
 
     @Column(name="created", nullable = false, updatable = false)
-    private Instant Created;
+    private Instant created;
 
     @Column(name="updated", nullable = false)
     private Instant updated;
@@ -66,11 +66,11 @@ public class Task {
     }
 
     public Instant getCreated() {
-        return Created;
+        return created;
     }
 
     public void setCreated(Instant created) {
-        Created = created;
+        created = created;
     }
 
     public TaskPriority getPriority() {
@@ -125,7 +125,7 @@ public class Task {
                 ", dueDate=" + dueDate +
                 ", status=" + status +
                 ", priority=" + priority +
-                ", Created=" + Created +
+                ", Created=" + created +
                 ", updated=" + updated +
                 '}';
     }
